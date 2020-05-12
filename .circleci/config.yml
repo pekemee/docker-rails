@@ -4,9 +4,12 @@ jobs:
     docker:
       - image: circleci/ruby:2.5.1-node-browsers-legacy
         environment:
+          BUNDLE_JOBS: 3
+          BUNDLE_RETRY: 3
+          BUNDLE_PATH: vendor/bundle
+          PGHOST: 127.0.0.1
+          PGUSER: postgres
           RAILS_ENV: test
-          POSTGRES_HOST: 127.0.0.1
-          POSTGRES_PASSWORD: password
       - image: circleci/postgres:12.2
         environment:
           POSTGRES_PASSWORD: password
