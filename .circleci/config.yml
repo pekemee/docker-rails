@@ -32,4 +32,4 @@ jobs:
 workflows:
   version: 2
     jobs:
-      - rspec:
+      - rspec
