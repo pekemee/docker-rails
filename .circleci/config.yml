@@ -37,7 +37,7 @@ jobs:
 
   deploy_prod:
     docker:
-      - image: circleci/ruby:2.6.1-node-browsers
+      - image: circleci/ruby:2.5.1-node-browsers
     working_directory: ~/myapp
     steps:
       - checkout
