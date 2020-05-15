@@ -51,7 +51,7 @@ workflows:
       - rspec
       - deploy:
          requires:
-          - build
+          - rspec
          filters:
           branches:
            only: master
